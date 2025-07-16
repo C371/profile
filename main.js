@@ -61,6 +61,7 @@ function generateTestPattern() {
             let b = new Bullet(0, 0, direction, speed, acceleration, curve, ttl);
             b.spawn();
             arrayBullets.push(b);
+            console.log("Bullet created:", b);
         }
     }
 }
