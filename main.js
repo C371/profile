@@ -1,6 +1,6 @@
 let arrayBullets = [];
 let shots = 0;
-let profileDropped = false;
+let profileDropped = true;
 
 function setup() {
     createCanvas(1280, 720);
