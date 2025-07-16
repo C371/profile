@@ -27,6 +27,9 @@ class Bullet{
         const dirX = Math.cos(rad);
         const dirY = -Math.sin(rad);
 
+        this.x += dirX * this.speed;
+        this.y += dirY * this.speed;
+
         const offscreen = ( this.x < -width / 2 || this.x > width / 2 || this.y < -height / 2 || this.y > height / 2);
         if (this.tick > this.ttl || offscreen) {
             this.markedForRemoval = true;
@@ -37,6 +40,7 @@ class Bullet{
     }
 
     draw() {
+        console.log("draw running");
         if (this.sprite) {
             imageMode(CENTER);
             image(this.sprite, this.x, this.y);
